@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Spencer Krebs</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans+Condensed:300|Playball&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rancho&effect=font-effect-outline" rel="stylesheet">
+    <style>
+      body, html {
+      height: 100%;
+      }
+      .centered{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 15vw;
+        white-space: nowrap;
+        overflow: hidden;
+        border: 5px solid white;
+        padding: 0.1em;
+        width: 70vw;
+        height: 20vw;
+
+        /*FIGURE OUT HOW TO GET THE WORDS TO WRAP AND SHRINK WITH PAGE*/
+      }
+      .quote{
+        text-align: center;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 7vw;
+
+      }
+      .quotelast{
+        text-align: center;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 4vw;
+      }
+      .heading{
+        text-align: center;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 7vw;
+        color: DodgerBlue;
+        padding: 0;
+        margin: 0;
+      }
+      .subheading{
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 3vw;
+        color: DodgerBlue;
+      }
+      .writing{
+        text-align: center;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 2vw;
+        border-bottom: 5px solid lightgray;
+        border-bottom-width: thin;
+        padding: 0;
+        margin: 0;
+      }
+      .paraw{
+        text-align: left;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 2vw;
+        flex-wrap: wrap;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .parallax {
+    /* The image used */
+      background-image: url("https://www.flightnetwork.com/blog/wp-content/uploads/2018/06/header-journey20.jpg");
+    /* Set a specific height */
+      height: 100%;
+    /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    @media only screen and (max-device-width: 700px) {
+      .parallax {
+        background-attachment: scroll;
+      }
+    }
+      .blue_box {
+        border: 0px;
+        padding: 0.5em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+      }
+      .row:after {
+        content: "";
+        display: flex;
+        flex-wrap: wrap;
+        clear: both;
+      }
+      .column {
+        float: left;
+        width: 33.33%;
+        flex-wrap: wrap;
+      }
+
+      #background{
+        background-color: rgb(223, 242, 254);
+      }
+      .pichold{
+        border: 2px solid black;
+        padding: 0em;
+        margin: 0em;
+        width: 33.33%;
+        height: auto;
+      }
+    </style>
+
+    <style>
+    ul {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 3vw;
+      color: white;
+      position: absolute;
+      bottom: 0;
+      right: 1%;
+    }
+    li {
+      display: inline;
+      text-align: center;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: none;
+      border-bottom: 1px solid white;
+    }
+
+    </style>
+    <style>
+    .hshott {
+      border-radius: 50%;
+      border: 2px solid DodgerBlue;
+      max-width: 80%;
+      height: auto;
+    }
+    </style>
+    <style>
+    .container {
+      position: relative;
+      float:left;
+      height: 400px;
+      width: 50%
+    }
+
+    .image {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: DodgerBlue;
+    }
+
+    .container:hover .overlay {
+      opacity: 1;
+    }
+
+    .text {
+      color: white;
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    </style>
+    <style>
+    .btn {
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      background-color: DodgerBlue;
+      color: white;
+      padding: 12px 40px;
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 50px;
+      border-radius: 12px;
+      margin-left: 42.5%;
+      margin-right: auto;
+    }
+    .btn:hover {
+      background-color: lightblue; /* Green */
+      color: white;
+      cursor: pointer;
+
+    }
+    .ctr{
+      margin-left: 42%;
+      margin-right: auto;
+    }
+    </style>
+    <style>
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 25px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+    }
+
+    /* Add a hover effect if you want */
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    /* Set a specific color for each brand */
+
+    /* Facebook */
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    /* Twitter */
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    .fa-linkedin{
+      background: #0077B5;
+      color: white;
+    }
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <div class="parallax">
+      <p class="centered">Spencer Krebs</p>
+    <ul>
+      <li><a class="underline" href="#profile">Profile</a></li>
+      <li><a href="#interests">Interests</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    </div>
+
+    <div class="quote">
+    <p> "Give me a place to stand, and a lever long enough, and I will move the Earth."<br>
+    -Archimedes</p>
+    </div>
+
+    <div>
+  <h1 class="heading" id="profile"> Profile </h1>
+  <p class="writing">Learning to be a software engineer<br><br></p>
+  </div>
+
+<div class="blue_box">
+  <div class="row">
+    <div class="column">
+      <h3 class="subheading">About me</h3>
+    <p class="paraw"> I just graduated in Chemical Engineering from Ohio State,
+        and I've accepted a position to transition into Software Engineering.
+        I'm working in the CODA program at Capital One in Richmond, Virginia to learn
+        about machine learning, artificial intelligence, cybersecurity, data engineering,
+        and more. The program is 2.5 years, and I can't wait to start learning about
+        these important and growing fields.</p>
+    </div>
+
+    <div class="column"><br><br>
+    <img src="headshot.png" alt='hshot' height ="350" width="300" class="hshott" style="margin-left: 10%; margin-right:auto">
+    </div>
+    <div class="column">
+      <h3 class="subheading">Details</h3>
+    <p class="paraw">
+      <span style="color:DodgerBlue"><strong>Age:</strong></span><br>
+      21 years<br>
+      <span style="color:DodgerBlue"><strong>Education:</strong></span><br>
+      Chemical Engineering<br>
+      The Ohio State University<br>
+      Class of 2019<br>
+      <span style="color:DodgerBlue"><strong>Location:</strong></span><br>
+      Richmond, Virginia<br>
+      United States<br>
+      Earth<br>
+    </p>
+    </div>
+  </div>
+</div>
+
+  <div class="quote">
+  <p> "We all have two lives, and the second begins when we realize we only have one."<br>
+  -Confucius</p>
+  </div>
+
+
+
+
+  <h1 class="heading" id="interests"> Interests </h1>
+  <p class="writing"></p><br>
+
+  <div class="container">
+    <img src="https://static.formula1.ferrari.com/imgresize-cache/c5d177e6592f57a0455ff0573fcc6ee1.jpg" alt="F1" class="image" style="object-fit: cover">
+    <a href="https://www.formula1.com/">
+    <div class="overlay">
+      <div class="text">Formula 1</div>
+    </div></a>
+  </div>
+
+  <div class="container">
+    <img src="https://wallpaperbro.com/img/36387.jpg" alt="golf" class="image" style="object-fit: cover">
+    <a href="https://www.youtube.com/watch?v=l8UL23m1qQY">
+    <div class="overlay">
+      <div class="text">Golf</div>
+    </div></a>
+  </div>
+
+  <div class="container">
+    <img src="http://www.cashadvance6online.com/data/archive/img/2126870439.jpeg" alt="surfing" class="image" style="object-fit: cover">
+    <a href="https://www.youtube.com/watch?v=l8UL23m1qQY">
+    <div class="overlay">
+      <div class="text">Surfing</div>
+    </div></a>
+  </div>
+
+  <div class="container">
+    <img src="https://www.superyachttimes.com/uploads/store/photo/39659/image/large-c3cc269a5a8291ec7e593a00b870b1df.jpg" alt="boats" class="image" style="object-fit: cover">
+    <a href="https://www.youtube.com/watch?v=nMxPhjcJeno">
+    <div class="overlay">
+      <div class="text">Boats</div>
+    </div></a>
+  </div>
+
+  <div class="container">
+    <img src="https://www.syfy.com/sites/syfy/files/2018/03/rick_and_morty.png" alt="rickandmorty" class="image" style="object-fit: cover">
+    <a href="https://www.youtube.com/watch?v=de2grEPn7rg">
+    <div class="overlay">
+      <div class="text">Rick and Morty</div>
+    </div></a>
+  </div>
+
+  <div class="container">
+    <img src="https://www.prosportsbackgrounds.com/assets/cleveland-browns-city.png" alt="browns" class="image" style="object-fit: cover">
+    <a href="https://www.clevelandbrowns.com/">
+    <div class="overlay">
+      <div class="text">Cleveland Browns</div>
+    </div></a>
+  </div>
+
+
+
+
+
+<div class="quote">
+<p style="display: inline-block; margin-top: 80px"> "A little nonsense now and then is relished by the wisest men."<br>
+-Willy Wonka</p>
+</div>
+
+
+<section id="background">
+  <h1 class="heading" id="projects">Projects</h1>
+  <p class="writing"></p>
+  <br>
+  <a href="https://github.com/spencerkrebs" class="btn">Github</a><br>
+  <br>
+  <br>
+  <h1 class="heading" id="contact">Contact</h1>
+  <p class="writing"></p>
+  <br>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons -->
+<div class="ctr">
+<a href="https://www.facebook.com/spencer.krebs.16" class="fa fa-facebook"></a>
+<a href="https://twitter.com/SpencerKrebs" class="fa fa-twitter"></a>
+<a href="https://www.linkedin.com/in/spencer-krebs-8a0854133/" class="fa fa-linkedin"></a><br><br><br>
+</div>
+
+
+</section>
+
+<div class="quotelast">
+<p> "One, look up at the stars and not down at your feet. However difficult
+  life may seem, there is always something you can do and succeed at. Two, never give up work.
+  Work gives you meaning and purpose and life is empty without it. Three, if you are lucky
+  enough to find love, remember that it is there and don't throw it away."<br>
+-Stephen Hawking</p><br>
+</div>
+
+
+</body>
+</html>
